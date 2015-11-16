@@ -1,0 +1,2 @@
+# ignore Excel tmp files
+~*.xlsm

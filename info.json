@@ -1,0 +1,13 @@
+{
+	"provider": ["IBM"], 
+	"name":  "DOcloud Call from Excel" ,
+	"model": [ "CPLEX" ],
+	"development": [ "Excel", "VBA" ],
+	"category": [ {"APPLICATION":["Desktop Application"]} ],
+	"industry": [ "Production" ],
+	"abstract": "Leverage the power of DOcloud directly from your Microsoft Excel workbook."
+}
+
+
+
+

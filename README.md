@@ -1,14 +1,14 @@
 
-# IBM DOcloud Call from Excel Sample
+# IBM DOcplexcloud Call from Excel Sample
 
-This sample shows how you can leverage the power of the [DOcloud service](https://dropsolve-oaas.docloud.ibmcloud.com/software/analytics/docloud) directly from your Microsoft Excel workbook. 
+This sample shows how you can leverage the power of the [DOcplexcloud service](https://dropsolve-oaas.docloud.ibmcloud.com/software/analytics/docloud) directly from your Microsoft Excel workbook. 
 
 
 ## Prerequisites
 
 1. You need Microsoft Excel 2010 or higher installed.
-2. You need to be registered to [IBM Decision Optimization on Cloud](https://onboarding-oaas.docloud.ibmcloud.com/software/analytics/docloud/) (free trial available).
-3. You need the [IBM DOcloud base URL and an API key](https://onboarding-oaas.docloud.ibmcloud.com/software/analytics/docloud/).
+2. You need to be registered to [IBM Decision Optimization on Cloud](https://onboarding-oaas.DOcloud.ibmcloud.com/software/analytics/docloud/) (free trial available).
+3. You need the [IBM DOcplexcloud base URL and an API key](https://onboarding-oaas.docloud.ibmcloud.com/software/analytics/docloud/).
 
 ## Configuration
 
@@ -24,9 +24,9 @@ The workbook allows you to solve the OPL model defined in the worksheet **Model*
 The optimization model in this sample is the *Factory planning* example. You can find more details on this model in the sample available in the DropSolve [FAQ & Samples](https://dropsolve-oaas.docloud.ibmcloud.com/dropsolve/doc).
 
 To see the code used by this sample you can use Microsoft Visual Basic for Applications. To open this, use **Alt+F11** in Excel.  
-The code is in the DOcloud module. To interact with the DOcloud service, we use the DOcloud REST API. For more information, you can access the [REST API Reference](https://developer.ibm.com/docloud/docs/rest-api/rest-api-documentation/) in the Developer Centre.
+The code is in the DOcplexcloud module. To interact with the DOcplexcloud service, we use the DOcplexcloud REST API. For more information, you can access the [REST API Reference](https://developer.ibm.com/docloud/docs/rest-api/rest-api-documentation/) in the Developer Centre.
 
-For example, the code to create a new job in DOcloud is:
+For example, the code to create a new job in DOcplexcloud is:
 
 	Dim docloudService As New WinHttpRequest
     With docloudService
@@ -36,7 +36,7 @@ For example, the code to create a new job in DOcloud is:
         .send "{ ""parameters"" : <list of parameters> }"
     End With
 
-When you click the **Solve** button, it creates and solves your problem on DOcloud. When a result is available, values for output elements are imported into the worksheet **Results.plan**. These data generate the **Report** worksheet, containing a Pivot Chart showing the new production plan per product per month.
+When you click the **Solve** button, it creates and solves your problem on DOcplexcloud. When a result is available, values for output elements are imported into the worksheet **Results.plan**. These data generate the **Report** worksheet, containing a Pivot Chart showing the new production plan per product per month.
 
 If you see these messages:
   * `Subscription [ODSTRIAL:XXXX] of user api_1111-11111-1111 has a limit of 5 jobs total`. In this case, you have to connect to [DropSolve](https://dropsolve-oaas.docloud.ibmcloud.com/dropsolve) and either remove one problem or check the option in dashboard worksheet to delete all existing jobs from DropSolve.
